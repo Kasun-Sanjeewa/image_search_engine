@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function ImageShow() {
+export default function ImageShow({ imageShowProp }) {
     return (
-        <div>ImageShow</div>
+        <div >
+            <img src={imageShowProp.urls.small} alt={imageShowProp.alt_description} ></img>
+        </div>
     )
 }
