@@ -1,10 +1,12 @@
 import React from 'react'
 import { useRef } from 'react';
+import './NavBar.css';
 
 export default function SearchBar({ onSubmit }) {
     /*const handleClick = () => {
         onSubmit('cars')
     }*/
+
     const InputuseRef = useRef(null);
     const handleForm = (e) => {
 
@@ -14,8 +16,9 @@ export default function SearchBar({ onSubmit }) {
     }
     return (
         <div>
-            <form onSubmit={handleForm} >
-                <input ref={InputuseRef}></input>
+            <form onSubmit={handleForm} className='Search-bar'>
+                <input ref={InputuseRef} placeholder='Type Here' ></input>
+                <button><i class="fa-solid fa-magnifying-glass" id='serchbtn' /></button>
             </form>
         </div>
     )
